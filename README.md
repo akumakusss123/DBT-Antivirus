@@ -3,7 +3,7 @@
 <p align="center">
   <img width="150" height="150" src="https://raw.githubusercontent.com/Cisco-Talos/clamav/main/logo.png" alt="Логотип ClamAV">
   
-  ![image alt](https://github.com/akumakusss123/DBT-Antivirus/blob/defc0394cc02859f75ad11dfa1f216545c4e0a16/virus.png)
+  ![image alt](https://github.com/akumakusss123/DBT-Antivirus/blob/bb16ac4c32133bd60668b00eb6f26597204f0643/totalvirus.png)
 <p align="center">
   <strong>Учебный проект умного антивирусного сканера.</strong>
 </p>
@@ -39,3 +39,8 @@
 **В будущем:** Нативное приложение для ПК/Android, которое использует этот же веб-API.
 
 ## 🗂️ Структура репозитория (начальная)
+
+
+
+  
+  ![image alt](https://github.com/akumakusss123/DBT-Antivirus/blob/bb16ac4c32133bd60668b00eb6f26597204f0643/totalvirus.png) <img width="150" height="150" src="https://raw.githubusercontent.com/Cisco-Talos/clamav/main/logo.png" alt="Логотип ClamAV">
