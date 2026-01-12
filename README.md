@@ -2,8 +2,9 @@
 
 <p align="center">
   <img width="150" height="150" src="https://raw.githubusercontent.com/Cisco-Talos/clamav/main/logo.png" alt="Логотип ClamAV">
-  <img width="150" height="150" src="https://www.virustotal.com/gui/images/vt-logo.svg](https://github.com/akumakusss123/DBT-Antivirus/blob/7716a794bec71b73a6ffbb9dd1c12973158b4fb5/totalvirus.png" alt="Логотип VirusTotal">
-</p>
+<0/p>
+
+![image alt](https://github.com/akumakusss123/DBT-Antivirus/blob/b397c4ba4be718292a387e1fa144757e75c553ce/totalvirus.png)
 
 <p align="center">
   <strong>Учебный проект умного антивирусного сканера.</strong>
