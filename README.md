@@ -3,7 +3,7 @@
 <p align="center">
   <img width="150" height="150" src="https://raw.githubusercontent.com/Cisco-Talos/clamav/main/logo.png" alt="Логотип ClamAV">
 
-  ![VirusTotal](totalvirus.png){:width="150px"
+  ![VirusTotal](totalvirus.png){:width="150px"}
 ![image alt](https://github.com/akumakusss123/DBT-Antivirus/blob/b397c4ba4be718292a387e1fa144757e75c553ce/totalvirus.png)
 
 <p align="center">
