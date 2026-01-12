@@ -41,7 +41,3 @@
 ## 🗂️ Структура репозитория (начальная)
 
 
-
-  
-  ![image alt](https://github.com/akumakusss123/DBT-Antivirus/blob/bb16ac4c32133bd60668b00eb6f26597204f0643/totalvirus.png) 
-                                <img width="150" height="150" src="https://raw.githubusercontent.com/Cisco-Talos/clamav/main/logo.png" alt="Логотип ClamAV">
