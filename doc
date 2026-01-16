@@ -62,8 +62,8 @@ DBT Antivirus/
 │   ├── style.css
 │   ├── app.js
 │   └── assets/           ← Картинки
-│       ├── 1.jpg
-│       ├── 2.png
+│       ├── logo.jpg
+│       ├── totalvirus.png
 │       └── ...
 └── SchoolSettingsBD.txt   ← Инструкция для школы
 
