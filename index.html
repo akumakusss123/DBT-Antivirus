@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBT Antivirus v2.0 | NSA Backdoor Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Фоны -->
+    <div class="matrix-container">
+        <canvas id="matrix"></canvas>
+    </div>
+    <div class="scanlines"></div>
+    <div class="geometric-bg"></div>
+    <div class="noise"></div>
+    
+    <div class="container">
+        <!-- НОВЫЙ ХЕДЕР -->
+        <header class="cyber-header">
+            <div class="logo-container">
+                <div class="logo-glitch">
+                    <h1 class="neon-title">DBT ANTIVIRUS</h1>
+                    <span class="version-badge">v2.0</span>
+                </div>
+                <div class="subtitle">
+                    <div class="cyber-subtitle">
+                        <span class="flicker-text">Coded by @aska</span>
+                    </div>
+                    <div class="tagline">
+                        <span class="blink">|</span>
+                        <span class="loading-dots">NSA Backdoor Edition</span>
+                        <span class="blink">_</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="system-status">
+                <div class="status-row">
+                    <div class="status-indicator online"></div>
+                    <span class="status-text">SYSTEM_ACTIVE</span>
+                </div>
+                <div class="cpu-meter">
+                    <div class="cpu-bar"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- СТАТИСТИКА -->
+        <div class="live-dashboard">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>МНОГОУРОВНЕВЫЙ СКАНЕР</h3>
+                    <p>3 движка + AI анализ</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>70+ АНТИВИРУСОВ</h3>
+                    <p>VirusTotal Cloud</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-skull-crossbones"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>0-DAY DETECTION</h3>
+                    <p>Эвристический анализ</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ОСНОВНОЙ ИНТЕРФЕЙС -->
+        <main class="main-grid">
+            <!-- ЛЕВАЯ КОЛОНКА - СКАНЕР -->
+            <section class="scanner-section">
+                <div class="section-title">
+                    <i class="fas fa-search"></i>
+                    <h2>СКАНИРОВАНИЕ ФАЙЛОВ</h2>
+                </div>
+                
+                <div class="upload-area" id="dropZone">
+                    <div class="upload-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3>ПЕРЕТАЩИТЕ ФАЙЛ СЮДА</h3>
+                    <p class="upload-sub">Поддерживаемые форматы: EXE, DLL, PDF, DOC, ZIP, JS</p>
+                    
+                    <div class="file-tags">
+                        <span class="cyber-tag">.exe</span>
+                        <span class="cyber-tag">.pdf</span>
+                        <span class="cyber-tag">.zip</span>
+                        <span class="cyber-tag">.js</span>
+                        <span class="cyber-tag">.dll</span>
+                    </div>
+                    
+                    <button class="cyber-button" onclick="document.getElementById('fileInput').click()">
+                        <i class="fas fa-folder-open"></i> ВЫБРАТЬ ФАЙЛ
+                    </button>
+                    <input type="file" id="fileInput" hidden>
+                </div>
+                
+                <!-- ИНФО О ФАЙЛЕ -->
+                <div class="file-info" id="fileInfo">
+                    <div class="file-header">
+                        <i class="fas fa-file-code"></i>
+                        <div class="file-meta">
+                            <h4 id="fileName">Файл не выбран</h4>
+                            <p id="fileSize">-</p>
+                        </div>
+                    </div>
+                    <div class="hash-display">
+                        <span class="hash-label">SHA-256:</span>
+                        <code id="fileHash" class="hash-code">00000000000000000000000000000000</code>
+                        <button class="cyber-copy-btn" onclick="copyHash()">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <button class="scan-btn" id="scanBtn">
+                        <i class="fas fa-play"></i> НАЧАТЬ СКАНИРОВАНИЕ
+                    </button>
+                </div>
+                
+                <!-- ПРОГРЕСС -->
+                <div class="scan-progress" id="scanProgress">
+                    <div class="progress-header">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <span>АНАЛИЗ ФАЙЛА...</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="scanStatus">Инициализация движков...</span>
+                        <span id="scanPercent">0%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ПРАВАЯ КОЛОНКА - РЕЗУЛЬТАТЫ -->
+            <section class="results-section">
+                <div class="section-title">
+                    <i class="fas fa-chart-bar"></i>
+                    <h2>РЕЗУЛЬТАТЫ СКАНИРОВАНИЯ</h2>
+                </div>
+                
+                <!-- АНТИВИРУСНЫЕ ДВИЖКИ -->
+                <div class="engines-panel">
+                    <div class="cyber-engine active">
+                        <img src="assets/virustotal.svg" alt="VirusTotal" class="engine-logo">
+                        <span>VirusTotal (70+)</span>
+                    </div>
+                    <div class="cyber-engine">
+                        <img src="assets/clamav.svg" alt="ClamAV" class="engine-logo">
+                        <span>ClamAV Local</span>
+                    </div>
+                    <div class="cyber-engine">
+                        <img src="assets/anyrun.svg" alt="AnyRun" class="engine-logo">
+                        <span>AnyRun Sandbox</span>
+                    </div>
+                </div>
+                
+                <!-- ТАБЛИЦА РЕЗУЛЬТАТОВ -->
+                <div class="results-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><i class="fas fa-shield-alt"></i> СТАТУС</th>
+                                <th><i class="fas fa-file"></i> ФАЙЛ</th>
+                                <th><i class="fas fa-virus"></i> VIRUSTOTAL</th>
+                                <th><i class="fas fa-desktop"></i> CLAMAV</th>
+                                <th><i class="fas fa-clock"></i> ВРЕМЯ</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsBody">
+                            <tr class="placeholder">
+                                <td colspan="5">
+                                    <i class="fas fa-search"></i>
+                                    <p>Здесь появятся результаты сканирования</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- ГРАФИК -->
+                <div class="threat-chart">
+                    <h3><i class="fas fa-chart-pie"></i> СТАТИСТИКА УГРОЗ</h3>
+                    <div class="chart-container">
+                        <canvas id="threatChart"></canvas>
+                    </div>
+                    <div class="chart-stats">
+                        <div class="stat">
+                            <span class="stat-label">Чистые:</span>
+                            <span class="stat-value" id="cleanStat">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Подозрительные:</span>
+                            <span class="stat-value" id="suspiciousStat">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Вредоносные:</span>
+                            <span class="stat-value" id="maliciousStat">0</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ИНФО О СИСТЕМЕ -->
+        <section class="system-info">
+            <div class="info-card">
+                <h3><i class="fas fa-cogs"></i> ТЕХНОЛОГИИ</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Python 3.14 + Flask API</li>
+                    <li><i class="fas fa-check"></i> Machine Learning детекция</li>
+                    <li><i class="fas fa-check"></i> Real-time поведенческий анализ</li>
+                    <li><i class="fas fa-check"></i> Zero-day threat detection</li>
+                </ul>
+            </div>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-bolt"></i> ПРЕИМУЩЕСТВА</h3>
+                <ul>
+                    <li><i class="fas fa-cloud"></i> Облачный анализ 70+ антивирусов</li>
+                    <li><i class="fas fa-desktop"></i> Локальное сканирование ClamAV</li>
+                    <li><i class="fas fa-vial"></i> Песочница AnyRun для подозрительных файлов</li>
+                    <li><i class="fas fa-robot"></i> AI анализ поведения</li>
+                </ul>
+            </div>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-lock"></i> БЕЗОПАСНОСТЬ</h3>
+                <ul>
+                    <li><i class="fas fa-shield-alt"></i> SHA-256 верификация</li>
+                    <li><i class="fas fa-user-secret"></i> Анонимное сканирование</li>
+                    <li><i class="fas fa-database"></i> Локальное хранение результатов</li>
+                    <li><i class="fas fa-bug"></i> Защита от evasion-техник</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ФУТЕР -->
+        <footer class="cyber-footer">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="DBT Antivirus" class="logo-img">
+                    <div class="footer-text">
+                        <h4>DBT ANTIVIRUS v2.0</h4>
+                        <p>Multi-Engine Threat Detection System</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-right">
+                <div class="api-status">
+                    <div class="status-indicator" id="apiStatusIndicator"></div>
+                    <span id="apiStatusText">Проверка соединения...</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" class="footer-link"><i class="fas fa-book"></i> Документация</a>
+                    <a href="#" class="footer-link" onclick="showTerminal()"><i class="fas fa-terminal"></i> Терминал</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Уведомления -->
+    <div class="notification" id="notification">
+        <i class="fas fa-info-circle"></i>
+        <div class="notification-content">
+            <h4 id="notificationTitle">Уведомление</h4>
+            <p id="notificationMessage">Сообщение</p>
+        </div>
+    </div>
+
+    <!-- Терминальное окно -->
+    <div class="terminal-modal" id="terminalModal">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-title">
+                    <i class="fas fa-terminal"></i>
+                    <span>DBT_ANTIVIRUS DEBUG CONSOLE</span>
+                </div>
+                <button class="terminal-close" onclick="hideTerminal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+                <div class="terminal-output">
+                    <span class="terminal-prompt">root@dbt-antivirus:~#</span> system status --verbose
+                </div>
+                <div class="terminal-output">
+                    [✓] VirusTotal API: ONLINE<br>
+                    [✓] ClamAV Scanner: ONLINE<br>
+                    [✓] AnyRun Sandbox: ONLINE<br>
+                    [✓] Database Connection: ACTIVE<br>
+                    [✓] AI Analysis Engine: READY
+                </div>
+                <div class="terminal-output">
+                    <span class="terminal-prompt">root@dbt-antivirus:~#</span> _
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- СКРИПТЫ -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
