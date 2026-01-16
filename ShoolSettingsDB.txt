@@ -1,0 +1,5 @@
+		host="localhost",         # localhost
+                database="XXX", # БД (с пробелом!)
+                user="postgres",          # Стандартный пользователь
+                password="xxx",         # ПАРОЛЬ ОТ POSTGRES! В ШКОЛЕ ПО ДЕФОЛТУ 12345
+                port="5432"               # Стандартный порт  ++

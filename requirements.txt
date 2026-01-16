@@ -1,0 +1,10 @@
+# Установи дополнительные зависимости:
+pip install flask flask-cors requests python-dotenv psycopg2-binary
+
+pip install apscheduler redis pytest python-dotenv flask-mail
+
+# Запусти тесты:
+python -m pytest test_api.py
+
+# Запусти с улучшениями:
+python backend.py
